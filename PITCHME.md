@@ -1,8 +1,6 @@
 #HSLIDE
 ## Защо Elixir?
-
-#HSLIDE
-### (в контекста на реактивното програмиране и реактивните системи)
+(в контекста на реактивното програмиране и реактивните системи)
 
 #HSLIDE
 ![Image-Absolute](assets/title.png)
@@ -51,7 +49,7 @@
 
 * Или пък сте чували за Elixir? <!-- .element: class="fragment" -->
 * Или пък сте HYPE-нати от думичката 'Reactive'? <!-- .element: class="fragment" -->
-* Или пък искат да се видим, зашото се познаваме! <!-- .element: class="fragment" -->
+* Или пък искат да се видим, защото се познаваме! <!-- .element: class="fragment" -->
 
 #HSLIDE
 ![Image-Absolute](assets/hype.jpg)
@@ -89,11 +87,18 @@
 #HSLIDE
 ### Какво е 'Reactive Programming'
 
-* Терминът FRP е много размит:
- * В Haskell средите се говори за променливи знаещи миналите си и настоящите си стойности - поведения
- * В RX средите се говори за 'Observables' - потоци, които 'push'-ват информация при промяна
- * Някои хора виждат map/filter/accumulate и за тях, това значи FRP
-* Затова няма да говорим за FRP
+Терминът FRP е много размит:
+
+#HSLIDE
+### Какво е 'Reactive Programming'
+
+* В Haskell средите се говори за променливи знаещи миналите си и настоящите си стойности - поведения <!-- .element: class="fragment" -->
+* В RX средите се говори за 'Observables' - потоци, които 'push'-ват информация при промяна <!-- .element: class="fragment" -->
+* Някои хора виждат map/filter/accumulate и за тях, това значи FRP <!-- .element: class="fragment" -->
+
+#HSLIDE
+### Какво е 'Reactive Programming'
+Затова няма да говорим за FRP.
 
 #HSLIDE
 ### Какво е 'Reactive Programming'
@@ -133,11 +138,8 @@ class AreaComputation extends BaseProObject {
   }
   Prop<Integer> area() {
     class area extends AutoProperty<Integer> {
-      @Override
       protected Integer compute() {
-        Integer res = width().get() * height().get();
-
-        return res;
+        return width().get() * height().get();
       }
     }
     return getBean().makeProp(area.class);
@@ -231,6 +233,17 @@ results = Reacto::HTTP.get('http://www.some-url.com')
     Reacto::Trackable.interval(5, (0..value).each)
   end
 ....
+```
+
+#HSLIDE
+
+```ruby
+subscription = results.on(
+  value: consumer,
+  error: ->(e) { raise e },
+  close: ->() { p 'Done' }
+)
+results.await(subscription)
 ```
 
 #HSLIDE

@@ -479,6 +479,8 @@ Elixir е всичко което е Erlang
 
 #HSLIDE
 ## Реактивни системи/програми с еликсир
+
+#HSLIDE
 ![Image-Absolute](assets/alchemy-9.jpg)
 
 #HSLIDE

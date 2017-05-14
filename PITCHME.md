@@ -39,7 +39,7 @@
 #HSLIDE
 ### Кои сте вие?
 
-* Вие се интересувате от програми изградена от компоненти? <!-- .element: class="fragment" -->
+* Вие се интересувате от програми, изградени от компоненти? <!-- .element: class="fragment" -->
 * Вие се интересувате от програми, които използват всички налични ресурси? <!-- .element: class="fragment" -->
 * Вие искате състоянието на данните ви и състоянието на програмата ви да са свързани и тази връзка да е автоматизирана? <!-- .element: class="fragment" -->
 
@@ -57,29 +57,29 @@
 ![Image-Absolute](assets/hype.jpg)
 
 #HSLIDE
-### Какво е 'Reactive Programming'
+### Какво е 'Reactive Programming'?
 ![Image-Absolute](assets/buzz.jpg)
 
 #HSLIDE
-### Какво е 'Reactive'
+### Какво е 'Reactive'?
 
 * Терминът е малко размит... <!-- .element: class="fragment" -->
 * Свързва се с думи като 'streaming', 'lightweight', 'real-time', 'asynchronous' <!-- .element: class="fragment" -->
 * Свързва се с 'events', 'messages', 'notifications', 'components' <!-- .element: class="fragment" -->
 
 #HSLIDE
-### Какво е 'Reactive'
+### Какво е 'Reactive'?
 
 * Една програма е реактивна, когато различни компоненти от нея могат да реагират на промени <!-- .element: class="fragment" -->
  * от други компоненти, от които се интересуват <!-- .element: class="fragment" -->
- * от външни источници, от които се интересуват <!-- .element: class="fragment" -->
+ * от външни източници, от които се интересуват <!-- .element: class="fragment" -->
  * на данните, които използват <!-- .element: class="fragment" -->
 
 #HSLIDE
 ![Image-Absolute](assets/04-MS-Excel-4-0-Office-4-0.gif)
 
 #HSLIDE
-### Какво е 'Reactive Programming'
+### Какво е 'Reactive Programming'?
 
 * Начин да напишем реактивна програма. <!-- .element: class="fragment" -->
 * Често е 'event-driven'. <!-- .element: class="fragment" -->
@@ -87,23 +87,23 @@
 * Върти се около промени в данните и последствията от това. <!-- .element: class="fragment" -->
 
 #HSLIDE
-### Какво е 'Reactive Programming'
+### Какво е 'Reactive Programming'?
 
 Терминът FRP е много размит:
 
 #HSLIDE
-### Какво е 'Reactive Programming'
+### Какво е 'Reactive Programming'?
 
-* В Haskell средите се говори за променливи знаещи миналите си и настоящите си стойности - поведения <!-- .element: class="fragment" -->
+* В Haskell средите се говори за променливи, знаещи миналите си и настоящите си стойности - поведения <!-- .element: class="fragment" -->
 * В RX средите се говори за 'Observables' - потоци, които 'push'-ват информация при промяна <!-- .element: class="fragment" -->
-* Някои хора виждат map/filter/accumulate и за тях, това значи FRP <!-- .element: class="fragment" -->
+* Някои хора виждат map/filter/accumulate и за тях това значи FRP <!-- .element: class="fragment" -->
 
 #HSLIDE
-### Какво е 'Reactive Programming'
+### Какво е 'Reactive Programming'?
 Затова няма да говорим за FRP.
 
 #HSLIDE
-### Какво е 'Reactive Programming'
+### Какво е 'Reactive Programming'?
 
 * Обикновено има библиотека, която ни позволява да описваме зависимости между компоненти. <!-- .element: class="fragment" -->
 * Такива библиотеки се справят с промени в данните, използвайки тези зависимости. <!-- .element: class="fragment" -->
@@ -116,7 +116,7 @@
 #HSLIDE
 ### Meddle and The Reactive Programming
 
-* В езици, с които съм работил сериозно - Java, Ruby, JavaScript съм се чувствал ограничен или затруднен. <!-- .element: class="fragment" -->
+* В езици, с които съм работил сериозно - Java, Ruby, JavaScript съм се чувствал огран  ичен или затруднен.
 * Поради това съм използвал/разработвал различни библиотеки, които често са били 'Реактивни'. <!-- .element: class="fragment" -->
 * Аз съм мързелив - искам да си улесня живота, искам програмите ми да се адаптират сами към промени в данните. <!-- .element: class="fragment" -->
 
@@ -253,10 +253,10 @@ results.await(subscription)
 
 * Лесно използване на всички налични ресурси - multiple cores, multiple CPUs. <!-- .element: class="fragment" -->
 * Лесен начин за разделяне на програмата на компоненти. <!-- .element: class="fragment" -->
-* Рецепти за справяне и само-лекуване от грешки. <!-- .element: class="fragment" -->
+* Рецепти за справяне и самолекуване от грешки. <!-- .element: class="fragment" -->
 * Улеснява работата с асинхронен код и non-blocking IO. <!-- .element: class="fragment" -->
-* В много случаи ни помага да напишем нещо по начин лесен за подръжка. <!-- .element: class="fragment" -->
-
+* В много случаи ни помага да напишем нещо по начин, лесен за поддръжка. <!-- .element: class="fragment" -->
+Ф
 #HSLIDE
 ### Какво получаваме?
 
@@ -274,7 +274,7 @@ results.await(subscription)
 
 * Функционален език за програмиране. <!-- .element: class="fragment" -->
 * Върви на BEAM - Виртуална машина на Erlang. <!-- .element: class="fragment" -->
-* Всичко написано на Erang може да се ползва в Elixir. <!-- .element: class="fragment" -->
+* Всичко написано на Erlang може да се ползва в Elixir. <!-- .element: class="fragment" -->
 * Млад език - 2012-2013, създателят му идва от Ruby света. <!-- .element: class="fragment" -->
 
 #HSLIDE

@@ -3,9 +3,6 @@
 (в контекста на реактивното програмиране и реактивните системи)
 
 #HSLIDE
-![Image-Absolute](assets/title.png)
-
-#HSLIDE
 ## Съдържание
 
 0. Представяне
@@ -14,6 +11,10 @@
 3. Elixir-level процеси
 4. Flow & GenStage
 5. Обществото около Elixir
+
+#HSLIDE
+![Image-Absolute](assets/title.png)
+
 
 #HSLIDE
 ### Кой съм аз?
@@ -25,6 +26,7 @@
 * Аз съм част от 'elixir-lang.bg' <!-- .element: class="fragment" -->
 
 #HSLIDE
+### Кой съм аз?
 ![Image-Absolute](assets/elixir_logo_bg.png)
 
 #HSLIDE

@@ -15,7 +15,6 @@
 #HSLIDE
 ![Image-Absolute](assets/title.png)
 
-
 #HSLIDE
 ### Кой съм аз?
 
@@ -65,7 +64,7 @@
 
 * Терминът е малко размит... <!-- .element: class="fragment" -->
 * Свързва се с думи като 'streaming', 'lightweight', 'real-time', 'asynchronous' <!-- .element: class="fragment" -->
-* Свързва се с 'events', 'messages', 'notifications', 'components' <!-- .element: class="fragment" -->
+* И още с 'events', 'messages', 'notifications', 'components' <!-- .element: class="fragment" -->
 
 #HSLIDE
 ### Какво е 'Reactive'?
@@ -105,7 +104,7 @@
 #HSLIDE
 ### Какво е 'Reactive Programming'?
 
-* Обикновено има библиотека, която ни позволява да описваме зависимости между компоненти. <!-- .element: class="fragment" -->
+* Обикновено има библиотеки, които ни позволяват да описваме зависимости между компоненти. <!-- .element: class="fragment" -->
 * Такива библиотеки се справят с промени в данните, използвайки тези зависимости. <!-- .element: class="fragment" -->
 * Асинхронна комуникация, event-и, конкурентни update-и <!-- .element: class="fragment" -->
 
@@ -116,7 +115,7 @@
 #HSLIDE
 ### Meddle and The Reactive Programming
 
-* В езици, с които съм работил сериозно - Java, Ruby, JavaScript съм се чувствал огран  ичен или затруднен.
+* В езици, с които съм работил сериозно - Java, Ruby, JavaScript съм се чувствал ограничен или затруднен.
 * Поради това съм използвал/разработвал различни библиотеки, които често са били 'Реактивни'. <!-- .element: class="fragment" -->
 * Аз съм мързелив - искам да си улесня живота, искам програмите ми да се адаптират сами към промени в данните. <!-- .element: class="fragment" -->
 
@@ -256,7 +255,7 @@ results.await(subscription)
 * Рецепти за справяне и самолекуване от грешки. <!-- .element: class="fragment" -->
 * Улеснява работата с асинхронен код и non-blocking IO. <!-- .element: class="fragment" -->
 * В много случаи ни помага да напишем нещо по начин, лесен за поддръжка. <!-- .element: class="fragment" -->
-Ф
+
 #HSLIDE
 ### Какво получаваме?
 
@@ -396,11 +395,9 @@ end
 ```elixir
 # Тази функция ще се изпълни в нов процес:
 pid = spawn fn -> 2 * 21 end
-# pid e от #PID тип.
-# Нещо подобно : #PID<0.42.0>
 
-# false, тъй като функцията се изпълнява бързо.
 Process.alive?(pid)
+# false, тъй като функцията се изпълнява бързо.
 
 # Можем да ползваме pid-а на текущия процес с:
 self()
@@ -411,13 +408,29 @@ Process.alive?(self()) # true
 #### Процеси:
 
 ```elixir
-send self(), {:howdy, "Как си?"}
+pid = spawn(fn ->
+  receive do
+    {:howdy, message} -> IO.puts(message)
+    {_, message} -> IO.puts("Няма значение")
+  end
+end)
 
-receive do
-  {:howdy, message} -> IO.puts(message)
-  {_, message} -> IO.puts("Няма значение")
+send pid, {:howdy, "Как си?"}
+```
+
+#HSLIDE
+#### Процеси + състояние:
+
+```elixir
+def main_loop(state) do
+  new_state =
+    receive do
+      some_transforming_msg -> transform(state)
+      anything_else -> state
+    end
+
+  main_loop(new_state)
 end
-# Ще изпечата 'Как си?
 ```
 
 #HSLIDE
@@ -579,7 +592,7 @@ end)
 
 #HSLIDE
 * GenStage добавя back-pressure механизми към потоците от данни
-* Преизползване на код със supervisor-и. <!-- .element: class="fragment" -->
+* Преизползване на код със GenServer & Supervisor. <!-- .element: class="fragment" -->
 * Данни, модули процеси! <!-- .element: class="fragment" -->
 
 #HSLIDE
